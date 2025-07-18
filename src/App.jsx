@@ -11,7 +11,7 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Le Juste Loyer</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Le Juste Loyer - Paris</h1>
           </div>
           
           {/* Navigation Menu */}
