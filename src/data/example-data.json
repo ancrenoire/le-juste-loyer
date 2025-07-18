@@ -1,0 +1,15 @@
+{
+    "sample": {
+        "message": "This is an example JSON file",
+        "description": "Replace this with your actual data"
+    },
+    "properties": [
+        {
+            "id": 1,
+            "address": "123 Example Street",
+            "rent": 1200,
+            "size": 65,
+            "rooms": 3
+        }
+    ]
+}
