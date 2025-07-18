@@ -14,17 +14,17 @@ const RentGame = () => {
   const [result, setResult] = useState(null);
   const [isChecking, setIsChecking] = useState(false);
 
-  // Filter data for 2023 (latest available data)
-  const data2023 = useMemo(() => {
-    return parisRentData.filter(item => item.annee === "2023");
+  // Filter data for 2025 (latest available data)
+  const data2025 = useMemo(() => {
+    return parisRentData.filter(item => item.annee === "2025");
   }, []);
 
   // Extract unique values for dropdowns
   const uniqueValues = useMemo(() => {
-    const quartiers = [...new Set(data2023.map(item => item.nom_quartier))].sort();
-    const meubleTypes = [...new Set(data2023.map(item => item.meuble_txt))].sort();
-    const pieces = [...new Set(data2023.map(item => item.piece))].sort((a, b) => a - b);
-    const epoques = [...new Set(data2023.map(item => item.epoque))].sort();
+    const quartiers = [...new Set(data2025.map(item => item.nom_quartier))].sort();
+    const meubleTypes = [...new Set(data2025.map(item => item.meuble_txt))].sort();
+    const pieces = [...new Set(data2025.map(item => item.piece))].sort((a, b) => a - b);
+    const epoques = [...new Set(data2025.map(item => item.epoque))].sort();
 
     return {
       quartiers,
@@ -32,7 +32,7 @@ const RentGame = () => {
       pieces,
       epoques
     };
-  }, [data2023]);
+  }, [data2025]);
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
@@ -55,7 +55,7 @@ const RentGame = () => {
     setIsChecking(true);
     
     // Find matching data
-    const matchingData = data2023.find(item => 
+    const matchingData = data2025.find(item => 
       item.nom_quartier === formData.nom_quartier &&
       item.meuble_txt === formData.meuble_txt &&
       item.piece === parseInt(formData.piece) &&
