@@ -11,34 +11,34 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <h1 className="text-2xl font-bold text-gray-900">Le Juste Loyer</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Le Juste Loyer</h1>
           </div>
           
           {/* Navigation Menu */}
-          <nav className="flex gap-4">
+          <nav className="flex gap-2 sm:gap-4">
             <Link
               to="/"
-              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
+              className={`px-2 sm:px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                 location.pathname === '/'
                   ? 'bg-blue-500 text-white'
                   : 'text-gray-600 hover:bg-gray-100'
               }`}
             >
-              📊 Données
+              📊<span className="hidden sm:inline ml-1">Données</span>
             </Link>
             <Link
               to="/jeu"
-              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
+              className={`px-2 sm:px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                 location.pathname === '/jeu'
                   ? 'bg-purple-500 text-white'
                   : 'text-gray-600 hover:bg-gray-100'
               }`}
             >
-              🎮 Vérificateur
+              🎮<span className="hidden sm:inline ml-1">Vérificateur</span>
             </Link>
           </nav>
 
-          <div className="text-sm text-gray-500">
+          <div className="hidden sm:block text-sm text-gray-500">
             Données 2025 - Ville de Paris
           </div>
         </div>
